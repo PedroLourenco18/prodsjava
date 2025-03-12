@@ -10,3 +10,14 @@ spring:
     h2:
       console:
         enabled: true
+        path: /h2-console
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:my-secret-key}
+google:
+  client:
+    id: ${CLIENT_ID}
+    secret: ${CLIENT_SECRET}
+  redirect:
+    uri: http://localhost:8080/oauth2/google/callback
