@@ -1,6 +1,7 @@
 package br.com.pedroloureco.prodsjava.domain.user;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -25,7 +26,7 @@ public class User {
 
     private String password;
 
-    private String role;
+    private UserRole role;
 
     @CreatedDate
     @Column(name = "created_at")
